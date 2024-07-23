@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://xyyqce5lt0en"]
+
+[ext_resource type="PackedScene" uid="uid://b4e2ahtn271fb" path="res://3D Third-Person Movement/player.tscn" id="1_c2xno"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_va55i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swixn"]
+size = Vector3(6.8058, 0.0772551, 6.8381)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ookfu"]
+
+[node name="3D Movement" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03295, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.72744, 5)
+mesh = SubResource("BoxMesh_va55i")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.076653, -0.0247356, 0.14549)
+shape = SubResource("BoxShape3D_swixn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(3.41489, 0, 0, 0, 3.41489, 0, 0, 0, 3.41489, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ookfu")
+
+[node name="Player" parent="." instance=ExtResource("1_c2xno")]
+transform = Transform3D(-0.999997, 0.00211213, -0.000968239, 0.00211251, 0.999998, -0.000390445, 0.000967404, -0.000392508, -0.999999, -0.00696215, 1.12966, -0.0504037)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Player"]
+transform = Transform3D(0.947411, 0.163008, -0.275394, 0.000253573, 0.860168, 0.510011, 0.320021, -0.48326, 0.814891, -1.32629, 1.94296, 3.87598)
+light_energy = 0.354
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Player"]
+transform = Transform3D(0.976987, -0.209118, -0.0420197, 0.204845, 0.864973, 0.458104, -0.0594521, -0.45617, 0.887905, 1.61049, 1.78988, 4.00669)
+light_energy = 0.354

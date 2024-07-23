@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4e2ahtn271fb"]
+
+[ext_resource type="Script" path="res://3D Third-Person Movement/Player.gd" id="1_kr5vv"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_daovp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_purvd"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.988417, 0)
+script = ExtResource("1_kr5vv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-08, 0)
+mesh = SubResource("CapsuleMesh_daovp")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-08, 0)
+shape = SubResource("CapsuleShape3D_purvd")
+
+[node name="CamOrigin" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.786247, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CamOrigin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.936, -0.125, 1.98638)
+spring_length = 0.2
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="CamOrigin/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00193805, 0.000684977, 0.00253022)
