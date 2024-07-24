@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccq21xex5pa0l"]
 
-[ext_resource type="Script" path="res://Examples/Main Menu/back_to_menu.gd" id="2_yip2e"]
+[ext_resource type="Script" path="res://Examples/Main Menu/settings.gd" id="1_sjx0a"]
 
 [sub_resource type="Gradient" id="Gradient_s06m2"]
 offsets = PackedFloat32Array(0)
@@ -16,10 +16,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2_yip2e")
+script = ExtResource("1_sjx0a")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.333333)
+layout_mode = 0
 offset_left = 440.0
 offset_top = 106.0
 offset_right = 822.0
@@ -49,6 +50,7 @@ offset_left = 2.0
 offset_top = 99.0
 offset_right = 335.333
 offset_bottom = 115.0
+focus_neighbor_top = NodePath("../../Option/OptionButton")
 value = 100.0
 
 [node name="Checkbox" type="Label" parent="."]
@@ -137,6 +139,7 @@ offset_left = 524.0
 offset_top = 567.0
 offset_right = 741.0
 offset_bottom = 605.0
+focus_neighbor_bottom = NodePath("../Slider/HSlider")
 theme_override_font_sizes/font_size = 21
 text = "Back To Menu"
 

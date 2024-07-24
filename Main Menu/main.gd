@@ -3,11 +3,6 @@ extends Control
 func _process(delta):
 	$Menu.visible = 1-int($Settings.visible)
 	
-func _input(tab):
-	if tab is InputEventKey and tab.pressed:
-		if tab.keycode == KEY_TAB:
-			$Menu/Buttons/Exit.grab_focus()
-
 func _on_start_button_down():
 	get_tree().change_scene_to_file("res://Examples/Main Menu/this_is_a_game.tscn")
 
