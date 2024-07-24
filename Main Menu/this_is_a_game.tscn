@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://jj32qna0jkuc"]
+
+[ext_resource type="PackedScene" uid="uid://48mo7iukr7so" path="res://Examples/Main Menu/pause_menu.tscn" id="2_i28a7"]
+
+[node name="This is a Game" type="Node2D"]
+
+[node name="Text" type="Label" parent="."]
+offset_left = 365.714
+offset_top = 283.0
+offset_right = 934.714
+offset_bottom = 394.0
+pivot_offset = Vector2(284, 55)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.478431)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 20
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/font_size = 81
+text = "This is a game."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="Text"]
+offset_left = -212.714
+offset_top = 65.0
+offset_right = 356.286
+offset_bottom = 176.0
+pivot_offset = Vector2(284, 55)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.207843)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 21
+text = "(esc to pause)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause Menu" parent="." instance=ExtResource("2_i28a7")]
+visible = false
+offset_left = 7.0
+offset_top = -10.35
+offset_right = 7.0
+offset_bottom = -10.35
