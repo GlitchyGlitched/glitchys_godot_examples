@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://xyyqce5lt0en"]
 
-[ext_resource type="PackedScene" uid="uid://b4e2ahtn271fb" path="res://3D Third-Person Movement/player.tscn" id="1_c2xno"]
+[ext_resource type="PackedScene" uid="uid://b4e2ahtn271fb" path="res://Examples/3D Third-Person Movement/player.tscn" id="1_c2xno"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_va55i"]
 

@@ -21,7 +21,7 @@ offset_bottom = 720.0
 layout_mode = 0
 offset_left = 512.0
 offset_top = 170.0
-offset_right = 765.0
+offset_right = 765.001
 offset_bottom = 281.0
 pivot_offset = Vector2(126, 55)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.478431)
@@ -38,7 +38,7 @@ vertical_alignment = 1
 layout_mode = 0
 offset_left = 512.0
 offset_top = 359.4
-offset_right = 767.035
+offset_right = 767.036
 offset_bottom = 566.4
 
 [node name="Start" type="Button" parent="Menu/Buttons"]
