@@ -4,7 +4,7 @@ This is a collection of Godot examples I either program myself, or replicate fro
 So far, there are examples such as:
  - 2D Top Down Movement (🟢)
  - 3D Third Person Movement (🟢)
- - Main Menu (🟠)
+ - Main Menu (🟡)
  - 3D First Person Movement (🔴)
 
-(Finished 🟢 / Work In Progress 🟠 / Planned 🔴)
+(Finished 🟢 / Finished, but could use some work 🟡 / Work In Progress 🟠 / Planned 🔴)
