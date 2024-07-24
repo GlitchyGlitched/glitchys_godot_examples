@@ -6,4 +6,4 @@ So far, there are examples such as:
  - 3D Third Person Movement (🟢)
  - Main Menu (🟠)
  - 3D First Person Movement (🔴)
-  (Finished 🟢 / Work In Progress 🟠 / Planned 🔴)
+ (Finished 🟢 / Work In Progress 🟠 / Planned 🔴)
