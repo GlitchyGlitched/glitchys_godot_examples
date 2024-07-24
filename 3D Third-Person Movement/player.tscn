@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4e2ahtn271fb"]
 
-[ext_resource type="Script" path="res://3D Third-Person Movement/Player.gd" id="1_kr5vv"]
+[ext_resource type="Script" path="res://Examples/3D Third-Person Movement/Player.gd" id="1_kr5vv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_daovp"]
 

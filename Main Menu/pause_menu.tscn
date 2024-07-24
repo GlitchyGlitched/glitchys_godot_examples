@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://48mo7iukr7so"]
+[gd_scene load_steps=5 format=3 uid="uid://48mo7iukr7so"]
 
-[ext_resource type="Script" path="res://Examples/Main Menu/Pause Menu.gd" id="1_xhot6"]
+[ext_resource type="Script" path="res://Examples/Main Menu/pause_menu.gd" id="1_xhot6"]
 [ext_resource type="PackedScene" uid="uid://ccq21xex5pa0l" path="res://Examples/Main Menu/settings.tscn" id="2_mcanm"]
+
+[sub_resource type="Gradient" id="Gradient_fy6wi"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_52226"]
+gradient = SubResource("Gradient_fy6wi")
 
 [node name="Pause Menu" type="Control"]
 layout_mode = 3
@@ -12,38 +19,52 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xhot6")
 
-[node name="PauseButtons" type="VBoxContainer" parent="."]
+[node name="Pause" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Pause"]
+modulate = Color(1, 1, 1, 0.333333)
+layout_mode = 0
+offset_left = 500.0
+offset_top = 234.0
+offset_right = 779.0
+offset_bottom = 481.0
+texture = SubResource("GradientTexture1D_52226")
+
+[node name="PauseButtons" type="VBoxContainer" parent="Pause"]
 layout_mode = 0
 offset_left = 512.0
 offset_top = 256.0
 offset_right = 765.0
 offset_bottom = 463.0
 
-[node name="Continue" type="Button" parent="PauseButtons"]
+[node name="Resume" type="Button" parent="Pause/PauseButtons"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Exit")
 focus_neighbor_bottom = NodePath(".")
 theme_override_font_sizes/font_size = 35
-text = "Continue"
+text = "Resume"
 
-[node name="HSeparator" type="HSeparator" parent="PauseButtons"]
+[node name="HSeparator" type="HSeparator" parent="Pause/PauseButtons"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Settings" type="Button" parent="PauseButtons"]
+[node name="Settings" type="Button" parent="Pause/PauseButtons"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../Exit")
 focus_neighbor_bottom = NodePath(".")
 theme_override_font_sizes/font_size = 35
 text = "Settings"
 
-[node name="HSeparator2" type="HSeparator" parent="PauseButtons"]
+[node name="HSeparator2" type="HSeparator" parent="Pause/PauseButtons"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Exit" type="Button" parent="PauseButtons"]
+[node name="Exit" type="Button" parent="Pause/PauseButtons"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Exit"
@@ -56,9 +77,11 @@ offset_top = 1.0
 offset_right = 3.0
 offset_bottom = 1.0
 
-[connection signal="button_down" from="PauseButtons/Continue" to="." method="_on_continue_button_down"]
-[connection signal="button_down" from="PauseButtons/Continue" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="PauseButtons/Settings" to="." method="_on_continue_button_down"]
-[connection signal="button_down" from="PauseButtons/Settings" to="." method="_on_settings_button_down"]
-[connection signal="button_down" from="PauseButtons/Settings" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="PauseButtons/Exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Resume" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Resume" to="." method="_on_continue_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Resume" to="." method="_on_resume_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Resume" to="." method="_on_continue_2_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Settings" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Settings" to="." method="_on_continue_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Settings" to="." method="_on_settings_button_down"]
+[connection signal="button_down" from="Pause/PauseButtons/Exit" to="." method="_on_exit_button_down"]
