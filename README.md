@@ -16,7 +16,7 @@ So far, **there are examples such as:**
 
 ![godot windows opt tools 64_u9lAtSoJeH](https://github.com/user-attachments/assets/d4b667e4-9e99-4e55-be58-819ef6e8a12a)
 
-## Saving and Loading (🟠)
+## ConfigFile Saving and Loading (🟠)
 
 ### Unfinished. 
 
